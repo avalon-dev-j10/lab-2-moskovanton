@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Shape[] shapes = null;
-
+  
         /*
          * TODO: Выполнить действия над массивом 'shapes'
          *
