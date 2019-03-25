@@ -48,7 +48,9 @@ public interface Shape {
      *
      * @return угол поворота фигуры.
      */
-    int getRotation();
+    default int getRotation(){
+        return 0;
+    }
 
     /*
      * TODO: изменить определение метотода 'getRotation()'
@@ -56,4 +58,7 @@ public interface Shape {
      * классам, не поддерживающим вращение, не требовалось
      * переопределять данный метод.
      */
+    
+    String getType(); //Возвращает тип фигуры
+    
 }
