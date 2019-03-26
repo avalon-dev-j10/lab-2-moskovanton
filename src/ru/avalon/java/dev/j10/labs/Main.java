@@ -3,7 +3,10 @@ package ru.avalon.java.dev.j10.labs;
 import ru.avalon.java.dev.j10.labs.shapes.*;
 
 public class Main {
-    
+    /**
+     * Метод, находящий в массиве 'shapes' фигуру
+     * с максимальной площадью.
+     */
     static void maxArea(Shape shapes[]) {
         System.out.println("------------------------------------------------");
         int maxIndex = 0;
