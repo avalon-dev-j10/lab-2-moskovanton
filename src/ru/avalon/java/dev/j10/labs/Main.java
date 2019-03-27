@@ -1,7 +1,3 @@
-package ru.avalon.java.dev.j10.labs;
-
-import ru.avalon.java.dev.j10.labs.shapes.*;
-
 public class Main {
     /**
      * Метод, находящий в массиве 'shapes' фигуру
@@ -34,13 +30,13 @@ public class Main {
         
         shapes[0] = new Circle(10);
         shapes[1] = new Rectangle(10, 6);
-        shapes[2] = new Triangle(3, 4, 5, 3);
+        shapes[2] = new Triangle(3, 4, 5);
         shapes[3] = new Circle(7);
         shapes[4] = new Rectangle(35, 11.4f);
-        shapes[5] = new Triangle(4, 5, 2, 3);
+        shapes[5] = new Triangle(4, 5, 2);
         shapes[6] = new Circle(2.3f);
         shapes[7] = new Rectangle(8, 4);
-        shapes[8] = new Triangle(11, 1, 2, 2);
+        shapes[8] = new Triangle(5, 6, 4);
         shapes[9] = new Circle(8.1f);
         
         for(int i = 0; i < shapes.length; i++){
