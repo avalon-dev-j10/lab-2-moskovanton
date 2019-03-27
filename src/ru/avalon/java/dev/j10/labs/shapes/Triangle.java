@@ -15,7 +15,7 @@ package ru.avalon.java.dev.j10.labs.shapes;
  * @see <a href="https://ru.wikipedia.org/wiki/%D0%A2%D1%80%D0%B5%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA">Треугольник</a>
  */
 public class Triangle implements Shape, Point, Polygon {
-    private float baseA;        //Основание А
+    private float sideA;        //Основание А
     private float sideB;        //Сторона В
     private float sideC;        //Сторона С
     private float x;            //Абцисса
@@ -38,7 +38,7 @@ public class Triangle implements Shape, Point, Polygon {
      */
     //Метод, возвращающий площадь фигуры
     public float getArea(){
-        return (float)Math.sqrt((getPerimeter()/2) * ((getPerimeter()/2) - baseA) * ((getPerimeter()/2) - sideB) * ((getPerimeter()/2) - sideC));
+        return (float)Math.sqrt((getPerimeter()/2) * ((getPerimeter()/2) - sideA) * ((getPerimeter()/2) - sideB) * ((getPerimeter()/2) - sideC));
     }
     //Метод, возвращающий угол поворота фигуры
     public int getRotation(){
@@ -54,11 +54,11 @@ public class Triangle implements Shape, Point, Polygon {
     }
     //Метод, возвращающий периметр фигуры
     public float getPerimeter(){
-        return baseA + sideB + sideC;
+        return sideA + sideB + sideC;
     }
     //Метод, возвращающий основание А фигуры
     public float getBaseA() {
-        return baseA;
+        return sideA;
     }
     //Метод, возвращающий сторону В фигуры
     public float getSideB() {
@@ -85,8 +85,8 @@ public class Triangle implements Shape, Point, Polygon {
         this.rotation = rotation;
     }
     //Полный конструктор
-    public Triangle(float baseA, float sideB, float sideC, float x, float y, int rotation) {
-        this.baseA = baseA;
+    public Triangle(float sideA, float sideB, float sideC, float x, float y, int rotation) {
+        this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
         this.x = x;
@@ -94,8 +94,8 @@ public class Triangle implements Shape, Point, Polygon {
         this.rotation = rotation;
     }
     //Конструктор без координат и угла поворота
-    public Triangle(float baseA, float sideB, float sideC) {
-        this(baseA, sideB, sideC, 0, 0, 0);
+    public Triangle(float sideA, float sideB, float sideC) {
+        this(sideA, sideB, sideC, 0, 0, 0);
     }
     
     /*  TODO (Проверка №1)

@@ -1,3 +1,8 @@
+import ru.avalon.java.dev.j10.labs.shapes.Circle;
+import ru.avalon.java.dev.j10.labs.shapes.Rectangle;
+import ru.avalon.java.dev.j10.labs.shapes.Shape;
+import ru.avalon.java.dev.j10.labs.shapes.Triangle;
+
 public class Main {
     /**
      * Метод, находящий в массиве 'shapes' фигуру
