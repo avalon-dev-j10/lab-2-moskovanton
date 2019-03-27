@@ -18,7 +18,6 @@ public class Triangle implements Shape, Point, Polygon {
     private float baseA;        //Основание А
     private float sideB;        //Сторона В
     private float sideC;        //Сторона С
-    private float heightH;      //Высота треугольника
     private float x;            //Абцисса
     private float y;            //Ордината
     private int rotation;       //Угол поворота
@@ -39,7 +38,7 @@ public class Triangle implements Shape, Point, Polygon {
      */
     //Метод, возвращающий площадь фигуры
     public float getArea(){
-        return baseA / 2 * heightH;
+        return (float)Math.sqrt((getPerimeter()/2) * ((getPerimeter()/2) - baseA) * ((getPerimeter()/2) - sideB) * ((getPerimeter()/2) - sideC));
     }
     //Метод, возвращающий угол поворота фигуры
     public int getRotation(){
@@ -69,10 +68,6 @@ public class Triangle implements Shape, Point, Polygon {
     public float getSideC() {
         return sideC;
     }
-    //Метод, возвращающий высоту Н треугольника
-    public float getHeightH() {
-        return heightH;
-    }
     //Метод, возвращающий тип фигуры
     public String getType(){
         return "Triangle";
@@ -90,18 +85,17 @@ public class Triangle implements Shape, Point, Polygon {
         this.rotation = rotation;
     }
     //Полный конструктор
-    public Triangle(float baseA, float sideB, float sideC, float heightH, float x, float y, int rotation) {
+    public Triangle(float baseA, float sideB, float sideC, float x, float y, int rotation) {
         this.baseA = baseA;
         this.sideB = sideB;
         this.sideC = sideC;
-        this.heightH = heightH;
         this.x = x;
         this.y = y;
         this.rotation = rotation;
     }
     //Конструктор без координат и угла поворота
-    public Triangle(float baseA, float sideB, float sideC, float heightH) {
-        this(baseA, sideB, sideC, heightH, 0, 0, 0);
+    public Triangle(float baseA, float sideB, float sideC) {
+        this(baseA, sideB, sideC, 0, 0, 0);
     }
     
     /*  TODO (Проверка №1)
